@@ -1,11 +1,11 @@
 prog : main.o liste.o element.o
-	g++ main.o liste.o element.o -o
+	g++ main.o liste.o element.o
 
 main.o : main.cpp liste.h element.h
-	g++ -o -Wall main.cpp
+	g++ -c -Wall main.cpp
 
-liste.o : liste.cpp liste.h
-	g++ -o -Wall liste.cpp
+liste.o : liste.cpp 
+	g++ -c -Wall liste.cpp
 
-element.o : element.cpp element.h
-	g++ -o -Wall element.cpp
+element.o : element.cpp
+	g++ -c -Wall element.cpp

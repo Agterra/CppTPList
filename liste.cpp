@@ -196,7 +196,6 @@ void Liste::suppressionEnTete()
 void Liste::vide()
 {
 
-
     if(this->ad == NULL)
         return;
 

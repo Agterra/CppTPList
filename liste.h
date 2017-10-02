@@ -18,6 +18,7 @@ class Cellule
 
 class Liste
 {
+
     public :
     //Constructeurs-------------------------------------------------------------
     Liste();
@@ -114,10 +115,14 @@ class Liste
     //Precondition : *this non vide et c adresse valide d'une Cellule de *this
     //Postcondition : l'info contenue dans *c a pour valeur e
     private :
-        void ajoutEnQueueConnaissantUneCellule(const Elem & e, Cellule *c);
+
+    void ajoutEnQueueConnaissantUneCellule(const Elem & e, Cellule *c);
+    
     void affichageDepuisCellule(const Cellule * c) const;
+    
     //Donnees membres-----------------------------------------------------------
-        Cellule *ad;
+    Cellule *ad;
+
 };
 
 

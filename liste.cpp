@@ -78,7 +78,7 @@ Liste & Liste::operator = (const Liste & l)
         localHead->info = passedHead->info;
 
     }
-
+        
     return *this;
 
 }

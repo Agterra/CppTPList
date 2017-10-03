@@ -252,36 +252,6 @@ Cellule * Liste::rechercheElement(const Elem & e) const
 
 }
 
-// void insereElementApresCellule(const Elem & e,Cellule *c)
-// {
-
-
-
-// }
-
-
-// void modifieInfoCellule(const Elem & e,Cellule *c)
-// {
-
-
-
-// }
-    
-// void ajoutEnQueueConnaissantUneCellule(const Elem & e, Cellule *c)
-// {
-
-
-
-// }
-
-// void affichageDepuisCellule(const Cellule * c) const
-// {
-
-
-
-// }
-
-
 
 
 

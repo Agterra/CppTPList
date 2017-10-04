@@ -1,7 +1,7 @@
-prog : main.o liste.o element.o
-	g++ main.o liste.o element.o
+prog : main.o liste.o element.o sliste.o
+	g++ main.o liste.o element.o sliste.o
 
-main.o : main.cpp liste.h element.h
+main.o : main.cpp liste.h element.h sliste.h
 	g++ -c -Wall main.cpp
 
 liste.o : liste.cpp 
@@ -9,3 +9,6 @@ liste.o : liste.cpp
 
 element.o : element.cpp
 	g++ -c -Wall element.cpp
+
+sliste.o : sliste.cpp
+	g++ -c -Wall sliste.cpp

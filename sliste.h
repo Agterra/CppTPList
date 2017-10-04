@@ -3,6 +3,16 @@
 
 #include <cstdio>
 
+#include <climits>
+
+#include <cstdlib>
+
+#include <ctime>
+
+#include <vector>
+
+#include <iostream>
+
 #include "element.h"
 
 #include "liste.h"
@@ -15,15 +25,17 @@ class SCellule
     friend class Sliste;
 
     private:
-    	Elem info;
-    	SCellule tab[5];
 
-}
+    	Elem info;
+    	
+    	SCellule *tetesSuivantes[5];
+    	
+    	int nb_niv;
+
+};
 
 class Sliste
 {
-
-SCellule *ad;
 
 public:
 
@@ -32,5 +44,13 @@ public:
 	Sliste(const Liste & l);
 
 	~Sliste();
+
+	void affichage();
 	
+private:
+
+	SCellule *teteListe;
+
 };
+
+#endif

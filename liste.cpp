@@ -27,7 +27,7 @@ Liste::Liste(const Liste & l)
 
         Cellule *newCellule = new Cellule();
 
-        localHead->suivant = newCellule;
+        localHead->suivant = newCellule;    
 
         localHead = localHead->suivant;
 

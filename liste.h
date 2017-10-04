@@ -11,7 +11,7 @@ class Cellule
 {
     friend class Liste;
 
-    private :
+    public :
         Elem info;
         Cellule *suivant;
 };
@@ -114,6 +114,9 @@ class Liste
     void modifieInfoCellule(const Elem & e,Cellule *c);
     //Precondition : *this non vide et c adresse valide d'une Cellule de *this
     //Postcondition : l'info contenue dans *c a pour valeur e
+    
+    Cellule *ad;
+
     private :
 
     void ajoutEnQueueConnaissantUneCellule(const Elem & e, Cellule *c);
@@ -121,7 +124,7 @@ class Liste
     void affichageDepuisCellule(const Cellule * c) const;
     
     //Donnees membres-----------------------------------------------------------
-    Cellule *ad;
+   
 
 };
 

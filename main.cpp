@@ -2,29 +2,42 @@
 
 #include "element.h"
 #include "liste.h"
+#include "sliste.h"
 #include <cstdio>
 
 int main()
 {
-  Liste lili;
-  std::printf("Lili\n");
-  lili.affichage();
-  for(int i=1;i<5;i++)
-    lili.ajoutEnTete(i);
-  std::printf("Lili\n");
-  lili.affichage();
-  for(int i=10;i<15;i++)
-    lili.ajoutEnQueue(i);
-  std::printf("Lili\n");
-  lili.affichage();
-  Liste lolo(lili);
-  std::printf("Lolo\n");
-  lolo.affichage();
-  lili.vide();
-  std::printf("Lolo\n");
-  lolo.affichage();
-  lolo=lili;
-  printf("Lolo\n");
-  lolo.affichage();
+
+  Liste list;
+
+  printf("Liste créée\n");
+
+  list.ajoutEnTete(10);
+
+  list.ajoutEnQueue(9);
+
+  list.ajoutEnQueue(8);
+
+  list.ajoutEnQueue(7);
+
+  list.ajoutEnQueue(6);
+
+  list.ajoutEnQueue(5);
+
+  list.ajoutEnQueue(4);
+
+  list.ajoutEnQueue(3);
+
+  list.ajoutEnQueue(2);
+
+  list.ajoutEnQueue(1);
+
+  list.affichage();
+
+  Sliste slist(list);
+
+  printf("SListe créée\n");
+
   return 0;
+
 }

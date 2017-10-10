@@ -210,7 +210,7 @@ SCellule * Sliste::recherche(Elem e)
 
 		assert(i < localHead->nb_niv);
 
-		while(localHead->tetesSuivantes[i] != NULL && i < 5)
+		while(localHead->tetesSuivantes[i] != NULL && i < localHead->nb_niv)
 		{
 
 			assert(localHead->tetesSuivantes[i]->info != INT_MIN);
@@ -311,6 +311,6 @@ void Sliste::affichage()
 Sliste::~Sliste()
 {
 
-
+	
 
 }

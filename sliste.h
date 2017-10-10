@@ -45,6 +45,10 @@ public:
 
 	~Sliste();
 
+	void inserer(Elem e);
+
+	SCellule * recherche(Elem e);
+
 	void affichage();
 	
 private:

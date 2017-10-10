@@ -12,17 +12,13 @@ int main()
 
   printf("Liste créée\n");
 
-  list.ajoutEnTete(10);
-
-  list.ajoutEnQueue(9);
+  list.ajoutEnTete(9);
 
   list.ajoutEnQueue(8);
 
   list.ajoutEnQueue(7);
 
   list.ajoutEnQueue(6);
-
-  list.ajoutEnQueue(5);
 
   list.ajoutEnQueue(4);
 
@@ -37,6 +33,25 @@ int main()
   Sliste slist(list);
 
   printf("SListe créée\n");
+
+  slist.inserer(5);
+
+  slist.affichage();
+
+  SCellule *cell = slist.recherche(15);
+
+  if(cell != NULL)
+  {
+
+    printf("Elem trouvé");
+
+  }
+  else
+  {
+
+    printf("Elem non trouvé");
+
+  }
 
   return 0;
 

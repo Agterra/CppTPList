@@ -151,6 +151,80 @@ Sliste::Sliste(const Liste & l)
 
 }
 
+void Sliste::inserer(Elem e)
+{
+
+	if(recherche(e) != NULL)
+	{
+
+		return;
+
+	}
+
+	SCellule *localHead = this->teteListe;
+
+	while(localHead->tetesSuivantes[0] != NULL && localHead->tetesSuivantes[0]->info > e)
+	{
+
+		localHead = localHead->tetesSuivantes[0];
+
+	}
+
+	SCellule *newCell = new SCellule();
+
+	newCell->nb_niv = 5;
+
+	for(int i = 0; i < newCell->nb_niv; i++)
+	{
+
+		newCell->tetesSuivantes[i] = NULL;
+
+	}
+
+	newCell->info = e;
+
+	SCellule *nextCell = localHead->tetesSuivantes[0];
+
+	localHead->tetesSuivantes[0] = newCell;
+
+	newCell->tetesSuivantes[0] = nextCell;
+
+}
+
+SCellule * Sliste::recherche(Elem e)
+{
+
+	int i;
+
+	SCellule *localHead = this->teteListe;
+
+	while(localHead->tetesSuivantes[0] != NULL)
+	{
+
+		i = 0;
+
+		while(localHead->tetesSuivantes[i] != NULL && localHead->tetesSuivantes[i]->info != NULL)
+		{
+
+			if(localHead->tetesSuivantes[i]->info == e)
+			{
+
+				return localHead->tetesSuivantes[i];
+
+			}
+
+			i++;
+
+		}
+
+		localHead = localHead->tetesSuivantes[0];
+
+	}
+
+	return NULL;
+
+}
+
 void Sliste::affichage()
 {
 
@@ -169,7 +243,18 @@ void Sliste::affichage()
 	while(teteListe->tetesSuivantes[0] != NULL)
 	{
 
-		printf("ELEMENT: %d; \tSUIVANTS: [", teteListe->info);
+		if(teteListe->info == INT_MIN)
+		{
+
+			printf("ELEMENT: -1; \tSUIVANTS: [");
+
+		}
+		else
+		{
+
+			printf("ELEMENT: %d; \tSUIVANTS: [", teteListe->info);
+
+		}
 
 		for (int i = 0; i < teteListe->nb_niv; i++)
 		{

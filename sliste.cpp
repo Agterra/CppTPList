@@ -198,13 +198,22 @@ SCellule * Sliste::recherche(Elem e)
 
 	SCellule *localHead = this->teteListe;
 
+	if(localHead == NULL)
+		return NULL;
+
+	assert(localHead->tetesSuivantes != NULL);
+
 	while(localHead->tetesSuivantes[0] != NULL)
 	{
 
 		i = 0;
 
-		while(localHead->tetesSuivantes[i] != NULL && localHead->tetesSuivantes[i]->info != NULL)
+		assert(i < localHead->nb_niv);
+
+		while(localHead->tetesSuivantes[i] != NULL && i < 5)
 		{
+
+			assert(localHead->tetesSuivantes[i]->info != INT_MIN);
 
 			if(localHead->tetesSuivantes[i]->info == e)
 			{

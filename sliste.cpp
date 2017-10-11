@@ -143,9 +143,7 @@ Sliste::Sliste(const Liste & l)
 
 		}
 
-		printf("Niveau: %d\n", i);
-
-		affichage();
+		// printf("Niveau: %d\n", i);
 
 	}
 
@@ -240,7 +238,7 @@ void Sliste::affichage()
 	if(teteListe == NULL)
 	{
 
-		printf("La liste est vide.\n");
+		printf("\nLa liste est vide.\n");
 
 		return;
 	}
@@ -255,7 +253,7 @@ void Sliste::affichage()
 		if(teteListe->info == INT_MIN)
 		{
 
-			printf("ELEMENT: -1; \tSUIVANTS: [");
+			printf("\nELEMENT: -1; \tSUIVANTS: [");
 
 		}
 		else
